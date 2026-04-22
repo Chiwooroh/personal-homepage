@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom'
 import { CARDS, VIDEOS } from '../constants'
 
 const NAV_ITEMS = [
-  { label: 'HOME', href: '#home' },
-  { label: 'ABOUT', href: '#about' },
-  { label: 'RESEARCH', href: '#research' },
-  { label: 'PUBLICATIONS', href: '#publications' },
-  { label: 'PROJECTS', href: '#projects' },
-  { label: 'CONTACT', href: '#contact' },
+  { label: 'HOME', id: 'home' },
+  { label: 'ABOUT', id: 'about' },
+  { label: 'RESEARCH', id: 'research' },
+  { label: 'PUBLICATIONS', id: 'publications' },
+  { label: 'PROJECTS', id: 'projects' },
+  { label: 'CONTACT', id: 'contact' },
 ] as const
+
+function scrollTo(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
 
 const SOCIAL_LINKS = [
   { icon: Mail, href: 'mailto:chiu.roh@gmail.com', label: 'Email' },
@@ -64,14 +68,14 @@ export default function HomePage() {
             </span>
 
             <nav className="liquid-glass hidden md:flex items-center gap-5 lg:gap-7 px-8 py-3.5 rounded-full">
-              {NAV_ITEMS.map(({ label, href }) => (
-                <a
+              {NAV_ITEMS.map(({ label, id }) => (
+                <button
                   key={label}
-                  href={href}
-                  className="font-grotesk text-cream/75 hover:text-cream text-sm tracking-[0.18em] transition-colors duration-300"
+                  onClick={() => scrollTo(id)}
+                  className="font-grotesk text-cream/75 hover:text-cream text-sm tracking-[0.18em] transition-colors duration-300 cursor-pointer"
                 >
                   {label}
-                </a>
+                </button>
               ))}
             </nav>
 
