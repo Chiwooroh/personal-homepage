@@ -14,11 +14,11 @@ export const VIDEOS = {
 
 export const CARDS = [
   {
-    title: 'GENERATIVE AI FOR MOBILITY',
-    tag: 'CORE RESEARCH',
-    label: 'RESEARCH FOCUS',
-    value: 'LLM-DRIVEN TRAJECTORY SYNTHESIS',
-    href: '/research',
+    title: 'RESEARCH PROFILE',
+    tag: 'ABOUT ME',
+    label: 'CURRENT POSITION',
+    value: 'RESEARCHER · KOTI',
+    href: '/about',
     video:
       'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_053923_22c0a6a5-313c-474c-85ff-3b50d25e944a.mp4',
   },
@@ -27,7 +27,7 @@ export const CARDS = [
     tag: 'ACADEMIC OUTPUT',
     label: 'HIGHLIGHT',
     value: '4 JOURNALS · 19+ PROCEEDINGS',
-    href: '/publications',
+    href: '/research',
     video:
       'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_054411_511c1b7a-fb2f-42ef-bf6c-32c0b1a06e79.mp4',
   },
